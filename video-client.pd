@@ -1,57 +1,67 @@
-#N canvas 129 170 973 641 10;
-#X obj 58 504 udpsend;
-#X msg 90 479 disconnect;
-#X obj 58 398 packOSC;
-#X obj 58 541 tgl 15 0 empty empty 1=connected 20 8 0 8 -262144 -45076
--1 0 1;
-#X msg 68 457 connect 192.168.10.99 8000;
-#X obj 128 400 print;
-#X floatatom 48 18 5 0 10 0 - - -, f 5;
-#X floatatom 112 184 5 0 1 0 - - -, f 5;
-#X obj 59 231 pack f f;
-#X obj 291 156 hsl 128 15 0 1 0 0 empty empty x: -24 6 0 10 -262144
+#N canvas 75 106 1160 608 10;
+#X obj 59 514 udpsend;
+#X msg 91 489 disconnect;
+#X obj 59 408 packOSC;
+#X obj 59 551 tgl 15 0 empty empty 1=connected 20 8 0 8 -262144 -45076
+-1 1 1;
+#X msg 69 467 connect 192.168.10.99 8000;
+#X obj 129 410 print;
+#X floatatom 58 18 5 0 10 0 - - -, f 5;
+#X floatatom 112 194 5 0 1 0 - - -, f 5;
+#X obj 59 241 pack f f;
+#X obj 291 166 hsl 128 15 0 1 0 0 empty empty x: -24 6 0 10 -262144
 -1 -1 6800 1;
-#X obj 291 178 hsl 128 15 0 1 0 0 empty empty y: -24 6 0 10 -262144
--1 -1 6500 1;
-#X text 10 18 id :;
-#X text 254 53 [position];
-#X text 55 52 [visible];
-#X floatatom 103 421 5 0 0 0 - - -, f 5;
-#X obj 258 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 291 188 hsl 128 15 0 1 0 0 empty empty y: -24 6 0 10 -262144
+-1 -1 7500 1;
+#X text 20 18 id :;
+#X text 254 63 [position];
+#X text 55 62 [visible];
+#X floatatom 104 431 5 0 0 0 - - -, f 5;
+#X obj 258 81 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 258 113 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 258 123 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 59 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 59 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 59 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 59 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 59 92 metro 500;
-#X obj 525 157 hsl 128 15 0 360 0 0 empty empty x: -24 6 0 10 -262144
+#X obj 59 102 metro 500;
+#X obj 525 167 hsl 128 15 0 360 0 0 empty empty x: -24 6 0 10 -262144
 -1 -1 0 1;
-#X obj 492 72 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 492 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 492 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 492 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 733 155 hsl 128 15 0 2 0 0 empty empty x: -24 6 0 10 -262144
--1 -1 12700 1;
-#X obj 733 177 hsl 128 15 0 2 0 0 empty empty y: -24 6 0 10 -262144
--1 -1 12700 1;
-#X obj 700 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 733 165 hsl 128 15 0 2 0 0 empty empty x: -24 6 0 10 -262144
+-1 -1 5400 1;
+#X obj 733 187 hsl 128 15 0 2 0 0 empty empty y: -24 6 0 10 -262144
+-1 -1 5500 1;
+#X obj 700 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 700 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 700 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 488 54 [rotation];
-#X text 696 52 [scale];
-#X msg 59 261 sendtyped /\$1/visible i \$2;
-#X obj 258 232 pack f f f;
-#X obj 492 233 pack f f;
-#X msg 492 260 sendtyped /\$1/rotation f \$2;
-#X msg 258 261 sendtyped /\$1/position ff \$2 \$3;
-#X obj 700 231 pack f f f;
-#X obj 492 92 metro 30;
-#X obj 258 91 metro 30;
-#X obj 700 90 metro 30;
-#X msg 700 259 sendtyped /\$1/scale ff \$2 \$3;
+#X text 488 64 [rotation];
+#X text 696 62 [scale];
+#X msg 59 271 sendtyped /\$1/visible i \$2;
+#X obj 258 242 pack f f f;
+#X obj 492 243 pack f f;
+#X msg 492 270 sendtyped /\$1/rotation f \$2;
+#X msg 258 271 sendtyped /\$1/position ff \$2 \$3;
+#X obj 700 241 pack f f f;
+#X obj 492 102 metro 30;
+#X obj 258 101 metro 30;
+#X obj 700 100 metro 30;
+#X msg 700 269 sendtyped /\$1/scale ff \$2 \$3;
+#X obj 946 165 hsl 128 15 0 1 0 0 empty empty x: -24 6 0 10 -262144
+-1 -1 8400 1;
+#X obj 913 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 913 122 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 913 241 pack f f;
+#X obj 913 100 metro 30;
+#X text 909 62 [alpha];
+#X msg 913 268 sendtyped /\$1/alpha f \$2;
 #X connect 0 0 3 0;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
@@ -61,6 +71,7 @@
 #X connect 6 0 30 0;
 #X connect 6 0 31 0;
 #X connect 6 0 34 0;
+#X connect 6 0 42 0;
 #X connect 7 0 8 1;
 #X connect 8 0 29 0;
 #X connect 9 0 30 1;
@@ -91,3 +102,10 @@
 #X connect 37 0 26 0;
 #X connect 38 0 2 0;
 #X connect 38 0 5 0;
+#X connect 39 0 42 1;
+#X connect 40 0 43 0;
+#X connect 41 0 42 0;
+#X connect 42 0 45 0;
+#X connect 43 0 41 0;
+#X connect 45 0 2 0;
+#X connect 45 0 5 0;
