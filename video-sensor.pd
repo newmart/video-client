@@ -1,0 +1,19 @@
+#N canvas 131 155 678 370 10;
+#X obj 65 237 udpsend;
+#X msg 66 181 connect 192.168.88.4 8000;
+#X msg 88 203 disconnect;
+#X obj 65 268 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 66 137 packOSC;
+#X msg 67 42 sendtyped /0/visible i 1;
+#X msg 89 70 sendtyped /0/position ff 0.5 0.5;
+#X obj 66 11 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 108 97 sendtyped /0/scale ff 0.5 0.5;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 4 0 1 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 0;
+#X connect 8 0 4 0;
