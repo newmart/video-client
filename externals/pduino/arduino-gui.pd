@@ -1,0 +1,308 @@
+#N canvas 414 44 847 546 10;
+#X declare -stdpath extra/moocow -stdlib extra/pdstring;
+#X obj 20 65 cnv 15 275 325 empty empty empty 20 12 0 14 -22189 -66577
+0;
+#X obj 340 61 inlet;
+#X obj 27 454 outlet;
+#X obj 154 451 outlet;
+#X obj 342 444 s \$0.ARDUINO.OUT;
+#X obj 449 444 s \$0.ARDUINO.INFO;
+#X obj 342 314 r \$0.ARDUINO.TO;
+#X obj 154 427 r \$0.ARDUINO.INFO;
+#X obj 340 83 s \$0.ARDUINO.IN;
+#X obj 272 346 includes/agop.digital.pin \$0 2;
+#X obj 272 332 includes/agop.digital.pin \$0 3;
+#X obj 272 318 includes/agop.digital.pin \$0 4;
+#X obj 272 304 includes/agop.digital.pin \$0 5;
+#X obj 272 290 includes/agop.digital.pin \$0 6;
+#X obj 272 276 includes/agop.digital.pin \$0 7;
+#X obj 272 255 includes/agop.digital.pin \$0 8;
+#X obj 272 241 includes/agop.digital.pin \$0 9;
+#X obj 272 227 includes/agop.digital.pin \$0 10;
+#X obj 272 213 includes/agop.digital.pin \$0 11;
+#X obj 272 199 includes/agop.digital.pin \$0 12;
+#X obj 272 185 includes/agop.digital.pin \$0 13;
+#X text 243 156 AREF;
+#X text 249 170 GND;
+#X text 255 359 TX;
+#X text 255 373 RX;
+#X obj 280 158 includes/agop.dummy.pin;
+#X obj 280 171 includes/agop.dummy.pin;
+#X obj 280 360 includes/agop.dummy.pin;
+#X obj 23 277 includes/agop.dummy.pin;
+#X obj 23 263 includes/agop.dummy.pin;
+#X obj 23 249 includes/agop.dummy.pin;
+#X obj 23 235 includes/agop.dummy.pin;
+#X obj 23 221 includes/agop.dummy.pin;
+#X obj 23 207 includes/agop.dummy.pin;
+#X obj 210 183 includes/agop.tx.led \$0;
+#X obj 197 183 includes/agop.rx.led \$0;
+#X text 340 175 \$0.ARDUINO.OUT;
+#X text 340 202 \$0.ARDUINO.INFO;
+#X text 340 229 \$0.ARDUINO.INTERN;
+#X text 340 148 \$0.ARDUINO.TO;
+#X text 340 121 \$0.ARDUINO.IN;
+#X text 458 230 <- GOP-internal Communication;
+#X text 458 203 <- Arduino Status Messages (sent to outlet1);
+#X text 458 175 <- Arduino Pin Messages (sent to outlet0);
+#X text 458 120 <- external commands (modules are listening here);
+#X text 458 148 <- Commands sent from modules -> [arduino];
+#X obj 20 20 includes/agop.firmware.check \$0;
+#X obj 86 206 cnv 15 28 175 empty empty empty 20 12 0 14 -66577 -66577
+0;
+#X text 36 206 RESET;
+#X text 36 220 3v3;
+#X text 36 234 5V;
+#X text 36 248 GND;
+#X text 36 262 GND;
+#X text 36 276 Vin;
+#X obj 115 213 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 225 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 237 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 249 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 261 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 273 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 285 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 297 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 309 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 321 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 333 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 345 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 357 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 115 369 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 213 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 225 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 237 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 249 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 261 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 273 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 285 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 297 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 309 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 321 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 333 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 345 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 357 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 84 369 cnv 1 1 5 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 194 35 cnv 15 55 70 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 73 65 includes/agop.device.selector \$0;
+#X obj 195 65 includes/agop.refresh.rate \$0;
+#X obj 35 59 cnv 15 37 60 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X text 194 187 R;
+#X text 194 196 X;
+#X text 208 196 X;
+#X text 208 187 T;
+#X obj 236 183 includes/agop.13.led \$0;
+#X text 233 187 L;
+#X obj 204 358 includes/agop.power.led \$0;
+#X text 201 362 PWR;
+#X obj 23 303 includes/agop.analog.pin \$0 14;
+#X obj 23 317 includes/agop.analog.pin \$0 15;
+#X obj 23 331 includes/agop.analog.pin \$0 16;
+#X obj 23 345 includes/agop.analog.pin \$0 17;
+#X obj 23 359 includes/agop.analog.pin \$0 18;
+#X obj 23 373 includes/agop.analog.pin \$0 19;
+#X text 44 302 A0;
+#X text 44 316 A1;
+#X text 44 330 A2;
+#X text 44 344 A3;
+#X text 44 358 A4;
+#X text 44 372 A5;
+#X text 249 240 PWM;
+#X text 249 212 PWM;
+#X text 249 289 PWM;
+#X text 249 226 PWM;
+#X text 249 303 PWM;
+#X text 249 331 PWM;
+#X obj 20 20 cnv 1 7 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 20 389 cnv 1 7 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 288 389 cnv 1 7 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 288 455 outlet;
+#X obj 154 389 cnv 1 7 1 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 27 425 r \$0.ARDUINO.OUT;
+#N canvas 925 331 412 218 supported.pin.modes.matrix 0;
+#X obj 30 93 tgl 15 0 empty empty O 3 7 0 10 -262144 -1 -1 0 1;
+#X obj 49 93 tgl 15 0 empty empty I 3 7 0 10 -262144 -1 -1 0 1;
+#X obj 68 93 tgl 15 0 empty empty P 3 7 0 10 -262144 -1 -1 0 1;
+#X obj 87 93 tgl 15 0 empty empty S 3 7 0 10 -262144 -1 -1 0 1;
+#N canvas 1106 233 363 312 bitmask 0;
+#X obj 55 58 << 1;
+#X obj 145 59 << 3;
+#X obj 40 117 +;
+#X obj 40 148 +;
+#X obj 40 177 +;
+#X obj 55 80 t b a;
+#X obj 98 106 t b a;
+#X obj 145 136 t b a;
+#X obj 13 23 inlet;
+#X obj 55 24 inlet;
+#X obj 98 24 inlet;
+#X obj 145 24 inlet;
+#X obj 40 239 outlet;
+#X obj 98 60 << 2;
+#X obj 193 169 t b a;
+#X obj 193 24 inlet;
+#X obj 193 59 << 4;
+#X obj 40 209 +;
+#X connect 0 0 5 0;
+#X connect 1 0 7 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 17 0;
+#X connect 5 0 2 0;
+#X connect 5 1 2 1;
+#X connect 6 0 3 0;
+#X connect 6 1 3 1;
+#X connect 7 0 4 0;
+#X connect 7 1 4 1;
+#X connect 8 0 2 0;
+#X connect 9 0 0 0;
+#X connect 10 0 13 0;
+#X connect 11 0 1 0;
+#X connect 13 0 6 0;
+#X connect 14 0 17 0;
+#X connect 14 1 17 1;
+#X connect 15 0 16 0;
+#X connect 16 0 14 0;
+#X connect 17 0 12 0;
+#X restore 30 113 pd bitmask;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array \$0.ARDUINO.PIN.MODES 128 float 3;
+#A 0 0 0 11 15 11 15 15 11 11 15 15 15 11 11 19 19 19 19 19 19 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0;
+#X coords 0 32 128 0 256 32 1 0 0;
+#X restore 18 26 graph;
+#X obj 30 166 tabwrite \$0.ARDUINO.PIN.MODES;
+#X floatatom 192 97 5 0 0 0 - - -;
+#X text 229 98 Pin no.;
+#X floatatom 30 138 5 0 0 0 - - -;
+#X obj 106 93 tgl 15 0 empty empty A 3 7 0 10 -262144 -1 -1 0 1;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 2 0 4 2;
+#X connect 3 0 4 3;
+#X connect 4 0 9 0;
+#X connect 7 0 6 1;
+#X connect 9 0 6 0;
+#X connect 10 0 4 4;
+#X restore 342 282 pd supported.pin.modes.matrix;
+#X obj 280 374 includes/agop.message.recorder \$0;
+#X obj 447 314 r \$0.ARDUINO.IN;
+#X obj 447 353 r \$0.ARDUINO.INTERN;
+#X obj 447 375 route emulate;
+#X obj 447 396 ==;
+#X obj 342 376 spigot 1;
+#X obj 334 407 cnv 15 65 25 empty empty empty 20 12 0 14 -203904 -66577
+0;
+#X obj 342 411 arduino;
+#X text 559 501 Copyright \, 2012 \, Roman Haefeli;
+#X text 661 516 Olsen Wolf;
+#X obj 212 113 cnv 15 18 48 empty empty empty 20 12 0 14 -66577 -66577
+0;
+#X obj 232 116 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 119 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 122 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 125 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 128 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 131 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 134 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 137 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 140 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 143 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 146 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 149 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 116 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 119 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 122 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 125 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 128 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 131 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 134 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 137 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 140 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 143 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 146 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 149 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 152 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 155 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 152 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 155 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 232 158 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 205 158 cnv 1 6 1 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 195 92 includes/agop.sample.rate \$0;
+#X connect 1 0 8 0;
+#X connect 6 0 124 0;
+#X connect 7 0 3 0;
+#X connect 117 0 2 0;
+#X connect 119 0 115 0;
+#X connect 120 0 124 0;
+#X connect 121 0 122 0;
+#X connect 122 0 123 0;
+#X connect 123 0 124 1;
+#X connect 124 0 126 0;
+#X connect 126 0 4 0;
+#X connect 126 1 5 0;
+#X coords 0 -1 1 1 275 370 2 20 20;
