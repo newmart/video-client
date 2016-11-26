@@ -1,16 +1,16 @@
-#N canvas 13 107 1165 780 10;
+#N canvas 48 198 1165 780 10;
 #X obj 70 593 udpsend;
 #X msg 102 568 disconnect;
 #X obj 70 487 packOSC;
 #X obj 70 630 tgl 15 0 empty empty 1=connected 20 8 0 8 -262144 -45076
--1 1 1;
+-1 0 1;
 #X floatatom 69 95 5 0 10 0 - - -, f 5;
 #X floatatom 123 267 5 0 1 0 - - -, f 5;
 #X obj 70 297 pack f f;
 #X obj 302 222 hsl 128 15 0 1 0 0 empty empty x: -24 6 0 10 -262144
--1 -1 6350 1;
+-1 -1 0 1;
 #X obj 302 244 hsl 128 15 0 1 0 0 empty empty y: -24 6 0 10 -262144
--1 -1 6350 1;
+-1 -1 0 1;
 #X text 31 65 id :;
 #X text 265 142 [position];
 #X text 66 141 [visible];
@@ -28,9 +28,9 @@
 #X obj 503 203 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 744 221 hsl 128 15 0 2 0 0 empty empty x: -24 6 0 10 -262144
--1 -1 6350 1;
+-1 -1 0 1;
 #X obj 744 243 hsl 128 15 0 2 0 0 empty empty y: -24 6 0 10 -262144
--1 -1 6350 1;
+-1 -1 0 1;
 #X obj 711 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 711 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -48,7 +48,7 @@
 #X obj 711 179 metro 30;
 #X msg 711 349 sendtyped /\$1/scale ff \$2 \$3;
 #X obj 957 221 hsl 128 15 0 1 0 0 empty empty x: -24 6 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 924 159 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 924 201 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -83,7 +83,7 @@
 #X msg 624 527 send /\$1/stop;
 #X obj 732 482 metro 500;
 #X obj 949 522 hsl 128 15 0 1 0 0 empty empty x: -24 6 0 10 -262144
--1 -1 12200 1;
+-1 -1 0 1;
 #X obj 916 460 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 916 502 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
