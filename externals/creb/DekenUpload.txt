@@ -1,0 +1,11 @@
+This creb package is downloaded from http://zwizwa.be/darcs/creb using "darcs get http://zwizwa.be/darcs/creb", build, packaged and uploaded to http://puredata.info/Members/fjkraan/software/ at 2016-01-08. 
+
+Apart from this file and the source package creb_source.tgz all files and directories are the result of the make install command.
+
+The used build platforms are:
+- Xubuntu X86_64 14.04 LTS on an Intel i3 CPU,
+- Xubuntu i686_32 14.04 LTS on an Intel i3 CPU,
+- MacOSX 10.5 Leopard compiling for i386-32, X86_64-32, ppc-32 on an Intel Core Duo, 
+- Raspian Wheezy (2015-05-05) on a Raspberry Pi 2 Model B.
+
+fjkraan@xs4all.nl, 2016-01-08
