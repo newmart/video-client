@@ -1,0 +1,33 @@
+#N canvas 358 170 616 500 10;
+#X obj 75 98 vradio 15 1 0 5 empty empty id 0 -8 0 10 -262144 -1 -1
+2;
+#X obj 108 175 tgl 15 0 empty empty visible 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 148 209 tgl 15 0 empty empty play/stop 17 7 0 10 -262144 -1
+-1 0 1;
+#X floatatom 420 166 5 0 0 0 pos_y - -, f 5;
+#X floatatom 209 89 5 0 0 0 jump - -, f 5;
+#X floatatom 256 121 5 0 0 0 volume - -, f 5;
+#X floatatom 344 70 5 0 0 0 scale_x - -, f 5;
+#X floatatom 344 29 5 0 0 0 scale_y - -, f 5;
+#X floatatom 383 133 5 0 0 0 rotation - -, f 5;
+#X floatatom 420 207 5 0 0 0 pos_x - -, f 5;
+#X floatatom 441 259 5 0 0 0 alpha - -, f 5;
+#X obj 116 298 video-player 192.168.88.4;
+#X obj 344 48 t b a;
+#X obj 420 185 t b a;
+#X connect 0 0 11 0;
+#X connect 1 0 11 1;
+#X connect 2 0 11 2;
+#X connect 3 0 13 0;
+#X connect 4 0 11 3;
+#X connect 5 0 11 4;
+#X connect 6 0 11 5;
+#X connect 7 0 12 0;
+#X connect 8 0 11 7;
+#X connect 9 0 11 8;
+#X connect 10 0 11 10;
+#X connect 12 0 6 0;
+#X connect 12 1 11 6;
+#X connect 13 0 9 0;
+#X connect 13 1 11 9;
