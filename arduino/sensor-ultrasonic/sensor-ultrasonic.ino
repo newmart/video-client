@@ -17,7 +17,11 @@ void setup() {
 
 void loop() {
   Firmata.sendAnalog(analogPin, readRange());  
+<<<<<<< HEAD
+  delay(150);
+=======
   delay(100);
+>>>>>>> 2f812a062a5b71536216dbce6a51dbcfb72982ef
 }
 
 int readRange() {
